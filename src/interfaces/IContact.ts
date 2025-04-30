@@ -6,3 +6,8 @@ export interface IContact {
     displayName: string;
     address: IAddress;
 };
+
+export interface IContactsContextValue {
+    contacts: IContact[];
+    addContact: (username: string, displayName: string, cep: string) => Promise<void>;
+};
