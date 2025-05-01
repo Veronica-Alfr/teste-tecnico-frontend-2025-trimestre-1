@@ -34,7 +34,7 @@ export const ContactsProvider: React.FC<IContactsProviderPros> = ({ children }) 
     const updateContact = (id: string, updatedDisplayName: string) => {
       setContacts((prevContacts) =>
         prevContacts.map((contact) =>
-          contact.id === id ? { ...contact, displayName: updatedDisplayName } : contact // O que sigfica retornar só contact?
+          contact.id === id ? { ...contact, displayName: updatedDisplayName } : contact
         )
       );
     };
