@@ -10,7 +10,7 @@ function App() {
         <Router>
         <ContactsProvider>
             <ToastContainer
-            position="bottom-right"
+            position="top-right"
             autoClose={3000}
             hideProgressBar
             newestOnTop
