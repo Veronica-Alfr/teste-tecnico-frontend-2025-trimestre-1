@@ -3,6 +3,8 @@
 
   <p>
     O projeto faz a consumação da API ViaCEP. Nele adicionamos contatos com base no seu CEP, retornando uma lista de contatos com seus endereços, na qual é possível excluí-lo e editar o nome de exibição do endereço.
+
+  [Assista ao vídeo do projeto](public/videos/Video_Project.mp4)
   </p>
 
   <h3>Status do Projeto</h3>
