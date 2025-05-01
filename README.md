@@ -1,34 +1,68 @@
-# teste-tecnico-frontend-2025-trimestre-1
-Teste técnico para a posição de Frontend Dev. Edição do primeiro trimestre de 2025.
+<main>
+  <h1 align="center">Lista de Contatos/Endereços</h1>
 
-## A proposta: Agenda de Endereços
+  <p>
+    O projeto faz a consumação da API ViaCEP. Nele adicionamos contatos com base no seu CEP, retornando uma lista de contatos com seus endereços, na qual é possível excluí-lo e editar o nome de exibição do endereço.
 
-A ideia é bem simples: dado um **nome de usuário**, um **nome de exibição de endereço** e também um **CEP**,
-queremos que você implemente a busca pelos dados de endereço usando algum provedor gratuito de busca de
-endereço (como, por exemplo, o ViaCEP), salve estes dados de alguma forma no lado do cliente e exiba os
-contatos catalogados com as opções de filtro por usuário, cidade e estado, bem como a busca por nome de
-exibição do endereço. Pedimos também a capacidade de edição do nome de exibição do endereço e a possibilidade
-de exclusão de um contato.
+  [Assista ao vídeo do projeto](public/videos/Video_Project.mp4)
+  </p>
 
-Quando sairmos e reentrarmos no site, esperamos que os contatos não tenham sumido, isto é, que exista
-persistência dos dados no lado do cliente.
+  <h3>Status do Projeto</h3>
+  
+    Requisitos obrigatórios finalizados ✅
 
-É esperado também que um toast seja exibido caso o endereço seja buscado com sucesso e outro para caso a busca
-de endereço falhe.
+  <h3>+ Tarefas 👩🏽‍💻</h3>
 
-## Restrições
+    - Adicionar testes unitários
 
-A única limitação é o uso requerido do framework React.js para JavaScript.
+  <h3>Observações</h3>
+  
+    Esse é um projeto com instruções e licença 📜 registrados aqui -> chore/README.md
 
-Você tem total liberdade para usar as demais bibliotecas que mais lhe fornecerem produtividade.
+<summary><h3>🐋 Rodando no Docker vs Localmente</h3></summary>
 
-## O que estamos avaliando
+  <details>
+  
+## 👉 Com Docker
 
-Este teste busca avaliar as seguintes competências:
+    ⚠ Antes de começar, seu docker-compose precisa estar na versão 2.29 e o docker na versão 27.2 de preferência.
 
-- Capacidade de integração de sistema frontend com APIs HTTP;
-- Domínio sobre as APIs de uso rotineiro do navegador;
-- Capacidade de organização de código (Adendo: organize da forma que for mais familiarizado, não estamos olhando para a estrutura de pastas, mas sim para a coesão e o desacoplamento) e
-- Domínio sobre APIs do Framework React.jS e árvore DOM.
+    ⚠ Suba o projeto completo usando o comando docker-compose up --build na raiz do projeto.
 
+    - Esses serviços inicializarão o contêiner chamado app_frontend.
 
+    - A partir daqui, você pode executar o contêiner via CLI ou abri-los no VS Code.
+
+    ℹ️ As dependências são instaladas por meio do Dockerfile que é lido pelo Docker.
+
+    ✨ Dica: A extensão Remote - Containers é recomendada para que você possa desenvolver sua aplicação no container Docker diretamente no VS Code, assim como você faz com seus arquivos locais.
+
+<br />
+
+## 👉 Sem Docker
+
+    > :information_source: Instale as dependências com `npm install` no diretório frontend/.
+
+    ⚠ Não execute o comando npm audit fix! Ele atualiza várias dependências do projeto que podem causar conflitos.
+
+    - ✨ Dica: Para executar o projeto dessa forma, você deve ter o node instalado no seu computador.
+
+    ⚠ Espera-se que a versão do node usada esteja entre as mais recentes (v20+).
+
+    - Para executar a aplicação use o comando `npm run dev` em seu diretório.
+
+  <br/>
+
+  </details>
+
+  <h3>🛠 Tecnologias</h3>
+
+    As tecnologias usadas foram: React, TS, ContextAPI, Hooks, Docker, Eslint, Tailwind CSS, Vite.
+    As bibliotecas utilizadas foram: Swal, React Icons, React Paginate, React Toastify.
+    
+
+  <h3>Author</h3>
+
+  <a href='https://github.com/Veronica-Alfr'>Verônica Alves</a>
+
+</main>
