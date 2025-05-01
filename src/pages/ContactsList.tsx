@@ -4,6 +4,7 @@ import SearchBar from "../components/SearchBar";
 import { IContact } from "../interfaces/IContact";
 import { toast } from "react-toastify";
 import HamburgerMenu from "../components/HamburguerMenu";
+import ContactCard from "../components/ContactCard";
 
 const ContactsList: React.FC = () => {
     const [searchTerm, setSearchTerm] = useState("");
@@ -15,7 +16,9 @@ const ContactsList: React.FC = () => {
     useEffect(() => {
         if (hasSearched && searchedTerm.trim()) {
         if (filteredContacts.length > 0) {
-            toast.success(`${filteredContacts.length} contato(s) encontrado(s) para "${searchedTerm}"`);
+            toast.success(
+            `${filteredContacts.length} contato(s) encontrado(s) para "${searchedTerm}"`
+            );
         } else {
             toast.error(`Nenhum contato encontrado para "${searchedTerm}"`);
         }
@@ -50,7 +53,10 @@ const ContactsList: React.FC = () => {
             </h1>
 
             <div className="flex justify-center">
-            <form onSubmit={handleSubmit} className="w-full max-w-3xl flex gap-4 mb-8">
+            <form
+                onSubmit={handleSubmit}
+                className="w-full max-w-3xl flex gap-4 mb-8"
+            >
                 <SearchBar
                 value={searchTerm}
                 onChange={handleSearchChange}
@@ -68,20 +74,7 @@ const ContactsList: React.FC = () => {
             {filteredContacts.length > 0 && (
             <ul className="space-y-4 max-w-2xl mx-auto">
                 {filteredContacts.map((contact: IContact) => (
-                <li
-                    key={contact.id}
-                    className="p-4 bg-white rounded-lg shadow hover:shadow-md transition-shadow duration-200 w-full"
-                >
-                    <h2 className="text-lg font-semibold text-gray-900">
-                    {contact.displayName}
-                    </h2>
-                    <p className="text-gray-600 text-sm">@{contact.username}</p>
-                    <div className="mt-2 text-xs text-gray-500">
-                    <p>{contact.address.street}, {contact.address.neighborhood}</p>
-                    <p>{contact.address.city} - {contact.address.state}</p>
-                    <p>{contact.address.cep}</p>
-                    </div>
-                </li>
+                <ContactCard key={contact.id} contact={contact} />
                 ))}
             </ul>
             )}

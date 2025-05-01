@@ -10,4 +10,10 @@ export interface IContact {
 export interface IContactsContextValue {
     contacts: IContact[];
     addContact: (username: string, displayName: string, cep: string) => Promise<void>;
+    updateContact: (id: string, updatedDisplayName: string) => void;
+    deleteContact: (id: string) => void;
+};
+
+export interface IContactCard {
+    contact: IContact;
 };
