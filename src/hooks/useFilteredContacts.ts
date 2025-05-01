@@ -6,6 +6,8 @@ export const useFilteredContacts = (searchTerm: string) => {
     const term = searchTerm.toLowerCase();
 
     return useMemo(() => {
+        if (!term.trim()) return contacts;
+
         return contacts.filter(contact => {
             return (
                 contact.username.toLowerCase().includes(term.toLocaleLowerCase()) ||

@@ -31,6 +31,7 @@ const ContactsList: React.FC = () => {
     e.preventDefault();
     if (!searchTerm.trim()) {
       toast.info("Digite um termo para busca!");
+      setSearchedTerm("");
       return;
     }
     setSearchedTerm(searchTerm.trim());
